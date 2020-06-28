@@ -1,21 +1,49 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+import { Container, Content } from 'native-base';
+import Swiper from 'react-native-swiper';
+import Timer from './Components/Timer.js';
 
 const styles = StyleSheet.create({
-  container: {
+  slideDefault: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#9DD6EB',
+  },
+  text: {
+    color: 'white',
+    fontSize: 30,
+    fontWeight: 'bold',
   },
 });
+
+export default class App extends React.Component {
+  render() {
+    return (
+      <Container>
+          <Swiper
+          loop={false}
+          showsPagination={false}
+          index={1}
+          >
+
+            <View style={styles.slideDefault}>
+              <Text style={styles.text}>Data</Text>
+            </View>
+
+            <View style={styles.slideDefault}>
+              <Timer></Timer>
+            </View>
+
+            <View style={styles.slideDefault}>
+              <Text style={styles.text}>Settings</Text>
+            </View>
+
+          </Swiper>
+      </Container>
+    );
+  }
+}
+
