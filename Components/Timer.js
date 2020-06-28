@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-import { Container, Content, Header, Item, Input, Button } from 'native-base';
+// import { Container, Content, Header, Item, Input, Button } from 'native-base';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
@@ -41,6 +41,11 @@ class TimerComponent extends Component {
                         <Ionicons name='ios-stats' style={{
                             color: 'white', fontSize: 55, paddingHorizontal: 10, marginBottom: 35
                         }}></Ionicons>
+                        <View style={{alignItems:'center'}}>
+                            <MaterialCommunityIcons name="circle-outline" style={{
+                                color: 'transparent', fontSize: 200
+                            }}></MaterialCommunityIcons>
+                        </View>
                         <Ionicons name='ios-settings' style={{
                             color: 'white', fontSize: 55, paddingHorizontal: 10, marginBottom: 35
                         }}></Ionicons>

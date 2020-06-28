@@ -1,9 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-import { Container, Content } from 'native-base';
+import { Container } from 'native-base';
 import Swiper from 'react-native-swiper';
-import Timer from './Components/Timer.js';
+
+import Timer from './Components/Timer';
+import Data from './Components/Data';
 
 const styles = StyleSheet.create({
   slideDefault: {
@@ -30,7 +32,7 @@ export default class App extends React.Component {
           >
 
             <View style={styles.slideDefault}>
-              <Text style={styles.text}>Data</Text>
+              <Data></Data>
             </View>
 
             <View style={styles.slideDefault}>
