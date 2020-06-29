@@ -32,20 +32,17 @@ class DataComponent extends Component {
     onChangeNbRepetitions(number, type) {
         console.log(number, type)
         console.log("NbRepetitions")
-        // this.props.sendRepetitions(number)
         this.props.sendData(number, 'NbRepetitions')
     }
     onChangeTimeExec(number, type) {
         console.log(number, type)
         console.log("TimeExec")
-        // this.props.sendTimeExec(number)
         this.props.sendData(number, 'TimeExec')
     }
     onChangeTimeRest(number, type) {
         console.log(number, type)
         console.log("TimeRest")
         this.props.sendData(number, 'TimeRest')
-        // this.props.sendRTimeRest(number)
     }
     render() {
         return (

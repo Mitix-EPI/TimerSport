@@ -30,12 +30,10 @@ export default class App extends React.Component {
       TimeExec: 45,
       TimeRest: 15
     };
-    // this.getNbRepetitions = this.getNbRepetitions.bind(this)
-    // this.getTimeExec = this.getTimeExec.bind(this)
-    // this.getTimeRest = this.getTimeRest.bind(this)
     this.getData = this.getData.bind(this)
 
   }
+
   getData(nb, type) {
     if (type == 'NbRepetitions') {
       this.setState({
@@ -53,23 +51,6 @@ export default class App extends React.Component {
       });
     }
   }
-  // getNbRepetitions(nbRep) {
-  //   this.setState({
-  //     NbRepetitions: nbRep
-  //   })
-  // }
-  // getTimeExec(timeExec) {
-  //   this.setState({
-  //     TimeExec: timeExec
-  //   })
-  // }
-  // getTimeRest(timeRest) {
-  //   this.setState({
-  //     TimeRest: timeRest
-  //   })
-  // }
-
-  //sendRepetitions={this.getNbRepetitions} sendTimeExec={this.getTimeExec} sendTimeRest={this.getTimeRest}
 
   render() {
     return (
