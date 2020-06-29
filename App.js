@@ -22,6 +22,35 @@ const styles = StyleSheet.create({
 });
 
 export default class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      NbRepetitions: 3,
+      TimeExec: 45,
+      TimeRest: 15
+    };
+    this.getNbRepetitions = this.getNbRepetitions.bind(this)
+    this.getTimeExec = this.getTimeExec.bind(this)
+    this.getTimeRest = this.getTimeRest.bind(this)
+
+  }
+  getNbRepetitions(nbRep) {
+    this.setState({
+      NbRepetitions: nbRep
+    })
+  }
+  getTimeExec(timeExec) {
+    this.setState({
+      TimeExec: timeExec
+    })
+  }
+  getTimeRest(timeRest) {
+    this.setState({
+      TimeRest: timeRest
+    })
+  }
+
   render() {
     return (
       <Container>
@@ -32,11 +61,11 @@ export default class App extends React.Component {
           >
 
             <View style={styles.slideDefault}>
-              <Data></Data>
+              <Data sendRepetitions={this.getNbRepetitions} sendTimeExec={this.getTimeExec} sendTimeRest={this.getTimeRest} ></Data>
             </View>
 
             <View style={styles.slideDefault}>
-              <Timer></Timer>
+              <Timer NbRepetitions={this.state.NbRepetitions} TimeExec={this.state.TimeExec} TimeRest={this.state.TimeRest}></Timer>
             </View>
 
             <View style={styles.slideDefault}>

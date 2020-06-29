@@ -29,8 +29,20 @@ const styles = StyleSheet.create({
   });
 
 class DataComponent extends Component {
-    onChange(number, type) {
+    onChangeNbRepetitions(number, type) {
         console.log(number, type)
+        console.log("NbRepetitions")
+        this.props.sendRepetitions(number)
+    }
+    onChangeTimeExec(number, type) {
+        console.log(number, type)
+        console.log("TimeExec")
+        this.props.sendTimeExec(number)
+    }
+    onChangeTimeRest(number, type) {
+        console.log(number, type)
+        console.log("TimeRest")
+        this.props.sendRTimeRest(number)
     }
     render() {
         return (
@@ -45,7 +57,7 @@ class DataComponent extends Component {
                         buttonStyle={{borderColor: 'transparent', borderRadius:25}}
                         minusIcon={() => <Ionicons name="ios-remove-circle" color='#FF2D00' size={50}></Ionicons>}
                         plusIcon={() => <Ionicons name="ios-add-circle" color='#00FF36' size={50}></Ionicons>}
-                        onChange={this.onChange.bind(this)}
+                        onChange={this.onChangeNbRepetitions.bind(this)}
                         ></Counter>
                     </View>
 
@@ -57,7 +69,7 @@ class DataComponent extends Component {
                         buttonStyle={{borderColor: 'transparent', borderRadius:25}}
                         minusIcon={() => <Ionicons name="ios-remove-circle" color='#FF2D00' size={50}></Ionicons>}
                         plusIcon={() => <Ionicons name="ios-add-circle" color='#00FF36' size={50}></Ionicons>}
-                        onChange={this.onChange.bind(this)}
+                        onChange={this.onChangeTimeExec.bind(this)}
                         ></Counter>
                     </View>
 
@@ -69,7 +81,7 @@ class DataComponent extends Component {
                         buttonStyle={{borderColor: 'transparent', borderRadius:25}}
                         minusIcon={() => <Ionicons name="ios-remove-circle" color='#FF2D00' size={50}></Ionicons>}
                         plusIcon={() => <Ionicons name="ios-add-circle" color='#00FF36' size={50}></Ionicons>}
-                        onChange={this.onChange.bind(this)}
+                        onChange={this.onChangeTimeRest.bind(this)}
                         ></Counter>
                     </View>
 

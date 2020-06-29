@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
 
 class TimerComponent extends Component {
     render() {
+        const { NbRepetitions, TimeExec, TimeRest } = this.props;
         return (
             <View style={{flex: 1}}>
                 <View style={{
@@ -29,6 +30,9 @@ class TimerComponent extends Component {
 
                     <View style={styles.slideDefault}>
                         <Text style={styles.text}>Timer</Text>
+                        <Text style={styles.text}>{NbRepetitions}</Text>
+                        <Text style={styles.text}>{TimeExec}</Text>
+                        <Text style={styles.text}>{TimeRest}</Text>
                     </View>
                     <View style={{
                         alignItems: 'flex-end',
