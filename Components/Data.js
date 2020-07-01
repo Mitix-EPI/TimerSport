@@ -7,23 +7,24 @@ import Counter from "react-native-counters"; //npm i react-native-counters --sav
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { LinearGradient } from 'expo-linear-gradient';
 
 const styles = StyleSheet.create({
     main: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#9DD6EB',
+        // backgroundColor: '#9DD6EB',
         marginBottom: -50,
     },
     slideDefault: {
       paddingVertical: 30,
       alignItems: 'center',
-      backgroundColor: '#9DD6EB',
+    //   backgroundColor: '#9DD6EB',
     },
     title: {
-      paddingVertical: 10,
-      fontSize: 18,
+        color: 'white',
+      fontSize: 25,
       fontWeight: 'bold',
     },
   });
@@ -47,10 +48,12 @@ class DataComponent extends Component {
     render() {
         return (
             <Container>
+                <LinearGradient colors={['#5E9DD7', '#6785C6', '#4c669f', '#3b5998', '#192f6a']} style={{flex:1}}>
+
                 <View style={styles.main}>
 
                     <View style={styles.slideDefault}>
-                        <Text style={{fontSize: 25}}>Number of Repetitions</Text>
+                        <Text style={styles.title}>Number of Repetitions</Text>
                         <Counter
                         howMuchEachTime={1}
                         start={3} min={1} max={30}
@@ -62,7 +65,7 @@ class DataComponent extends Component {
                     </View>
 
                     <View style={styles.slideDefault}>
-                        <Text style={{fontSize: 25}}>Time for each exercise (in sec)</Text>
+                        <Text style={styles.title}>Time for each exercise (in sec)</Text>
                         <Counter
                         howMuchEachTime={5}
                         start={45} min={20} max={600}
@@ -74,7 +77,7 @@ class DataComponent extends Component {
                     </View>
 
                     <View style={styles.slideDefault}>
-                        <Text style={{fontSize: 25}}>Time for each rest (in sec)</Text>
+                        <Text style={styles.title}>Time for each rest (in sec)</Text>
                         <Counter
                         howMuchEachTime={5}
                         start={15} min={5} max={300}
@@ -90,10 +93,11 @@ class DataComponent extends Component {
                 <View style={{
                     alignItems: 'flex-end',
                     flexDirection: 'row-reverse',
-                    backgroundColor: '#9DD6EB',
+                    // backgroundColor: '#9DD6EB',
                 }}>
-                    <MaterialCommunityIcons name="timer" style={{color: 'white', fontSize: 55, paddingHorizontal: 20, marginBottom: 50}}></MaterialCommunityIcons>
+                    <MaterialCommunityIcons name="timer" style={{color: 'black', fontSize: 55, paddingHorizontal: 20, marginBottom: 50}}></MaterialCommunityIcons>
                 </View>
+                </LinearGradient>
             </Container>
         );
     }
