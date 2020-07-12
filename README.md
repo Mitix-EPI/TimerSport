@@ -10,4 +10,4 @@ No more having to look at your stopwatch to see how much time you have left.
 
 Concentrate on your exercises. TimerSport sends a little sound when you need to rest or resume an exercise.
 
-Available for Android [Here](http://sport-timer.ml/)
+**Available for Android [Here](http://sport-timer.ml/)**
