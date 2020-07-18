@@ -1,4 +1,4 @@
-# :runner::watch: TimerSport :watch::runner:
+# :runner::watch: Sport Timer :watch::runner:
 
 During your physical training, you would like to make regular series in order to be assiduous and exemplary.
 
