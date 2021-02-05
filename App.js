@@ -12,13 +12,6 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 const slides = [
   {
-    key: 1,
-    title: 'Thanks Downloading\n\nSportTimer',
-    text: '',
-    image: require('./assets/intro1.png'),
-    backgroundColor: '#59b2ab',
-  },
-  {
     key: 2,
     title: 'Sport Timer',
     text: 'Will help you to improve your regularity\nin your training',
